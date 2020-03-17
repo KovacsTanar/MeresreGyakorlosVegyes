@@ -11,9 +11,11 @@ namespace MeresreGyakorlosVegyes
         static void Main(string[] args)
         {
             //Feladat1();
-            Feladat2();
-            Feladat4();
-
+            //Feladat2();
+            //Feladat4();
+            //Feladat5();
+            //Feladat6();
+            Feladat7();
         }
 
         static void Feladat1()
@@ -68,6 +70,69 @@ namespace MeresreGyakorlosVegyes
                 Console.WriteLine("Döntetlen!");
 
             Console.ReadKey();
+        }
+
+        static void Feladat5()
+        {
+
+            Console.WriteLine("Kérem a sugár értékét!");
+            double r = Convert.ToDouble(Console.ReadLine());
+
+            double felszin = 4 * Math.PI * Math.Pow(r, 2);
+            double terfogat = (4 * Math.PI) / 3 * Math.Pow(r, 3);
+
+            Console.WriteLine("A felszín: {0:0.00}",felszin);
+            Console.WriteLine("A térfogat: {0:0.00}",terfogat);
+
+            Console.ReadKey();
+
+        }
+
+        static void Feladat6()
+        {
+            Random rnd = new Random();
+
+           
+            int db55Felett = 0;
+            int osszeg = 0;
+
+            for (int i = 0; i < 21; i++)
+            {
+                int napiCsapadek = rnd.Next(35, 76);
+                Console.WriteLine("A(z) {0}. nap csapadék mennyisége: {1}",i+1,napiCsapadek);
+
+                if (napiCsapadek > 55)
+                {
+                    db55Felett++;
+                }
+
+                osszeg += napiCsapadek;
+            }
+
+            double atlag = (double)osszeg / 21;
+            Console.WriteLine("Az átlag csapadék: {0:0.00}",atlag);
+
+            Console.WriteLine("Ennyiszer volt a napi csapadék értéke 55mm felett: {0}", db55Felett);
+
+            Console.ReadKey();
+
+
+
+        }
+
+        static void Feladat7()
+        {
+            for (int i = 0; i < 12; i++)
+            {
+                Console.WriteLine("A 4 {0}. hatványa: {1}", i, Math.Pow(4,i));
+            }
+
+            Console.ReadKey();
+        }
+
+        static void Feladat8()
+        {
+
         }
 
 
